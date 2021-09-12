@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Budgetarian.WebAPI.Models
+namespace Budgetarian.Domain.Entities
 {
     public class Transaction
     {

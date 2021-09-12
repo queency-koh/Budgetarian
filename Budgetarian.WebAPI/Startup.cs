@@ -1,4 +1,4 @@
-using Budgetarian.WebAPI.Data;
+using Budgetarian.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

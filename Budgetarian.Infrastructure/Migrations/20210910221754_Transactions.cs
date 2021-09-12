@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Budgetarian.WebAPI.Migrations
+namespace Budgetarian.Infrastructure.Migrations
 {
     public partial class Transactions : Migration
     {

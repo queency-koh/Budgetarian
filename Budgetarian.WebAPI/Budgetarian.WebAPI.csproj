@@ -19,4 +19,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Budgetarian.Application\Budgetarian.Application.csproj" />
+    <ProjectReference Include="..\Budgetarian.Domain\Budgetarian.Domain.csproj" />
+    <ProjectReference Include="..\Budgetarian.Infrastructure\Budgetarian.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

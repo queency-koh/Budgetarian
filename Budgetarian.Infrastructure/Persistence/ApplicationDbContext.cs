@@ -1,7 +1,7 @@
-﻿using Budgetarian.WebAPI.Models;
+﻿using Budgetarian.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Budgetarian.WebAPI.Data
+namespace Budgetarian.Infrastructure.Persistence
 {
     public class ApplicationDbContext : DbContext
     {

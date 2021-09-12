@@ -1,4 +1,4 @@
-﻿namespace Budgetarian.WebAPI.Models
+﻿namespace Budgetarian.Domain.Entities
 {
     public class Category
     {
