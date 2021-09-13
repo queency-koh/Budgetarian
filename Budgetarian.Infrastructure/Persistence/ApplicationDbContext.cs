@@ -1,10 +1,11 @@
-﻿using Budgetarian.Domain.Entities;
+﻿using Budgetarian.Application.Common.Interfaces;
+using Budgetarian.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace Budgetarian.Infrastructure.Persistence
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
