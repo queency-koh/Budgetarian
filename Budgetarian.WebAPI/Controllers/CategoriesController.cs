@@ -1,5 +1,6 @@
 ﻿using Budgetarian.Application.Categories.Queries;
 using Budgetarian.Domain.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,10 +11,17 @@ namespace Budgetarian.WebAPI.Controllers
     [Route("api/[controller]")]
     public class CategoriesController : Controller
     {
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Category>>> GetCategories([FromServices] IGetCategoriesQuery query)
+        private readonly IMediator mediator;
+
+        public CategoriesController(IMediator mediator)
         {
-            return await query.Handle();
+            this.mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
+        {
+            return await mediator.Send(new GetCategoriesQuery());
         }
     }
 }

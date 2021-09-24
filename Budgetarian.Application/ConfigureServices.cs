@@ -1,5 +1,7 @@
 ﻿using Budgetarian.Application.Categories.Queries;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Budgetarian.Application
 {
@@ -8,7 +10,7 @@ namespace Budgetarian.Application
         public static IServiceCollection AddApplicationServices(
             this IServiceCollection services)
         {
-            services.AddTransient<IGetCategoriesQuery, GetCategoriesQuery>();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
 
             return services;
         }
